@@ -6,14 +6,6 @@
     font-family: 'Poppins', sans-sarif;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #607d8b;
-}
-
 .container {
     position: relative;
     top: 50px;
@@ -22,8 +14,6 @@ body {
 
 .cup {
     position: relative;
-    width: 280px;
-    height: 300px;
     background: linear-gradient(to right, #f9f9f9, #d9d9d9);
     border-bottom-left-radius: 45%;
     border-bottom-right-radius: 45%;
@@ -63,10 +53,6 @@ body {
 
 .handle {
     position: absolute;
-    top: 40px;
-    right: -70px;
-    width: 160px;
-    height: 180px;
     border: 25px solid #dcdcdc;
     border-left: 25px solid transparent;
     border-bottom: 25px solid transparent;
@@ -78,8 +64,6 @@ body {
     position: absolute;
     bottom: -50px;
     left: 50%;
-    width: 500px;
-    height: 200px;
     transform: translateX(-50%);
     background: linear-gradient(to right, #f9f9f9, #e7e7e7);
     border-radius: 50%;
@@ -120,7 +104,6 @@ body {
     bottom: 50px;
     display: block;
     margin: 0 2px 50px;
-    min-width: 8px;
     height: 120px;
     background: #fff;
     border-radius: 50%;
@@ -152,9 +135,8 @@ body {
 .wasi {
     position: absolute;
     top: 0;
-    font-size: 1em;
+    text-align: center;
     font-weight: 500;
-    border-bottom: 2px solid #dcdcdc;
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #dcdcdc;
@@ -170,5 +152,69 @@ body {
     }
     100% {
         transform: translate(20px, 0px);
+    }
+}
+
+@media (min-width: 100px) and (max-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #607d8b;
+        width: 100%;
+    }
+    .cup {
+        width: 180px;
+        height: 200px;
+    }
+    .handle {
+        top: 15px;
+        right: -50px;
+        width: 120px;
+        height: 140px;
+    }
+    .plate {
+        width: 300px;
+        height: 150px;
+    }
+    .wasi {
+        font-size: 0.7em;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .vapour span {
+        min-width: 4px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        max-width: 100%;
+        background: #607d8b;
+    }
+    .cup {
+        width: 280px;
+        height: 300px;
+    }
+    .handle {
+        top: 40px;
+        right: -70px;
+        width: 160px;
+        height: 180px;
+    }
+    .plate {
+        width: 500px;
+        height: 200px;
+    }
+    .wasi {
+        font-size: 1em;
+        border-bottom: 2px solid #dcdcdc;
+    }
+    .vapour span {
+        min-width: 8px;
     }
 }
